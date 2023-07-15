@@ -8,19 +8,19 @@ const Form = (props) => {
   const [Invstd, setInvstd] = useState("");
 
   const currsavinghandler = (event) => {
-    setCurrsavings(Number(event.target.value));
+    setCurrsavings(event.target.value);
   };
 
   const yearlysavinghandler = (event) => {
-    setYearlysavings(Number(event.target.value));
+    setYearlysavings(event.target.value);
   };
 
   const expinthandler = (event) => {
-    setExpint(Number(event.target.value));
+    setExpint(event.target.value);
   };
 
   const invstdhandler = (event) => {
-    setInvstd(Number(event.target.value));
+    setInvstd(event.target.value);
   };
 
   const submitHandler = (event) => {

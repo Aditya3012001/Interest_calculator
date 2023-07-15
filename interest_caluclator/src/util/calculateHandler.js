@@ -14,6 +14,12 @@ const calculateHandler = (userInput) => {
     currentSavings += yearlyInterest + yearlyContribution;
     totalInvestment += yearlyContribution;
     totalinterest += yearlyInterest;
+
+    // totalInvestment = Math.floor(totalInvestment);
+    // currentSavings = Math.floor(currentSavings);
+    // totalinterest = Math.floor(totalinterest);
+    // totalinterest = Math.floor(totalinterest);
+
     yearlyData.push({
       year: i + 1,
       yearlyInterest: yearlyInterest,

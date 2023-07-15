@@ -2,7 +2,6 @@ import "./Result.css";
 
 const Result = (props) => {
   const results = props.results;
-  console.log(props?.results[0].yearlyInterest);
 
   return (
     <>
