@@ -1,6 +1,9 @@
 import "./Result.css";
 
-const Result = () => {
+const Result = (props) => {
+  const results = props.results;
+  console.log(props?.results[0].yearlyInterest);
+
   return (
     <>
       <table className="result">
@@ -21,6 +24,24 @@ const Result = () => {
             <td>TOTAL INTEREST GAINED</td>
             <td>TOTAL INVESTED CAPITAL</td>
           </tr>
+
+          {results.length > 0 ? (
+            results.map((result, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>{result.year}</td>
+                  <td>{result.savingsEndOfYear}</td>
+                  <td>{result.yearlyInterest}</td>
+                  <td>{result.totalinterest}</td>
+                  <td>{result.totalInvestment}</td>
+                </tr>
+              );
+            })
+          ) : (
+            <tr>
+              <td>Notext</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </>

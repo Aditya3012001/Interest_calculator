@@ -4,32 +4,25 @@ import Form from "./components/Form";
 import Result from "./components/Result";
 
 import calculateHandler from "./util/calculateHandler";
+import { useState } from "react";
 
 function App() {
-  // do something with yearlyData ...
+  const [results, setresults] = useState([]);
 
-  let results = [];
   let userdata = [];
 
   const formtoapp = (...data) => {
     userdata = [...data];
-    console.log(userdata);
-
-    results = [...calculateHandler(userdata)];
-
+    let temp = [...calculateHandler(userdata)];
+    setresults([...temp]);
     console.log(results);
   };
-
-  // / calculate result  here and then pass the it to the render list
 
   return (
     <div>
       <Header />
       <Form formtoapp={formtoapp} />
-
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
-      <Result reuslts={results} />
+      <Result results={results} />
     </div>
   );
 }

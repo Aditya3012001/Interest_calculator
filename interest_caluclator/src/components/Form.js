@@ -25,7 +25,7 @@ const Form = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.formtoapp(Currsavings, Expint, Invstd, Yearlysavings);
+    props.formtoapp(Currsavings, Yearlysavings, Expint, Invstd);
     setCurrsavings("");
     setExpint("");
     setInvstd("");
@@ -91,3 +91,5 @@ const Form = (props) => {
 };
 
 export default Form;
+
+// controlled components are the ones whos statee is managed not by them
